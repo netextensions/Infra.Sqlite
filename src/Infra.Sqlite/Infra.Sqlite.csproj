@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
       <TargetFramework>netcoreapp3.1</TargetFramework>
       <RootNamespace>NetExtensions.Infra.Sqlite</RootNamespace>
@@ -8,7 +8,7 @@
       <Description>Extensions.SqLite</Description>
       <PackageProjectUrl>https://github.com/netextensions/Infra.Sqlite</PackageProjectUrl>
       <RepositoryUrl>https://github.com/netextensions/Infra.Sqlite</RepositoryUrl>
-      <PackageTags>Infra.Sqlite,.net core</PackageTags>
+      <PackageTags>Infra.Sqlite</PackageTags>
       <PackageId>NetExtensions.Infra.Sqlite</PackageId>
       <PackageVersion>1.0.0</PackageVersion>
       <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -20,7 +20,7 @@
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
-      <None Include="icon.png" Pack="true" Visible="false" PackagePath="" />
+      <None Include="..\..\icon.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.3" />
