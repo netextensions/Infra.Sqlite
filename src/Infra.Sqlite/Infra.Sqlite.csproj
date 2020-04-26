@@ -10,7 +10,7 @@
       <RepositoryUrl>https://github.com/netextensions/Infra.Sqlite</RepositoryUrl>
       <PackageTags>Infra.Sqlite</PackageTags>
       <PackageId>NetExtensions.Infra.Sqlite</PackageId>
-      <PackageVersion>1.0.0</PackageVersion>
+      <PackageVersion>1.0.2</PackageVersion>
       <PackageLicenseFile>LICENSE</PackageLicenseFile>
       <Authors>netextensions.io</Authors>
       <PackageIcon>icon.png</PackageIcon>
