@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
-namespace NetExtensions
+namespace NetExtensions.Infra.Sqlite
 {
     public static class SqliteExtension
     {
@@ -15,8 +15,8 @@ namespace NetExtensions
             var options = new DbContextOptionsBuilder<TContext>().UseSqlite(ConnectionString).Options;
             CreateContext(options).Database.Migrate();
             return services.AddSingleton(sp => options);
-        } 
-         
+        }
+
         public static (string ConnectionString, string DbFilePath) ConnectionStringBuilder(string connectionSetting)
         {
             var connectionString = PrepareConnectionString(connectionSetting);
@@ -26,7 +26,7 @@ namespace NetExtensions
 
         private static string PrepareConnectionString(string connectionSetting)
         {
-            return (string.Concat(connectionSetting.Where(c => !char.IsWhiteSpace(c))).ToLowerInvariant()).StartsWith("datasource=")
+            return string.Concat(connectionSetting.Where(c => !char.IsWhiteSpace(c))).ToLowerInvariant().StartsWith("datasource=")
                 ? connectionSetting : $"Data Source={connectionSetting}";
         }
         private static TContext CreateContext<TContext>(DbContextOptions<TContext> options) where TContext : DbContext => (TContext)Activator.CreateInstance(typeof(TContext), options);
